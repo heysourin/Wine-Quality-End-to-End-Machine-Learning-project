@@ -2,8 +2,8 @@ import os
 from pathlib import Path
 import logging
 
+# Information level logging:
 logging.basicConfig(level=logging.INFO, format='[%(asctime)s]: %(message)s:')
-
 
 project_name = "mlProject"
 
@@ -33,10 +33,11 @@ list_of_files = [
 
 for filepath in list_of_files:
     filepath = Path(filepath)
-    # separating file name and directory
+    
+    #! separating file name and directory
     filedir, filename = os.path.split(filepath)
 
-    # logic for creating the folder
+    #! logic for creating the folder
     if filedir != "":
         os.makedirs(filedir, exist_ok=True)
         logging.info(f"Creating directory; {filedir} for the file: {filename}")
@@ -50,4 +51,4 @@ for filepath in list_of_files:
     else:
         logging.info(f"{filename} is already exists")
 
-# ? The with statement ensures that the file is properly closed after writing.
+#? The with statement ensures that the file is properly closed after writing.
