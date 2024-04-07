@@ -20,7 +20,7 @@ logging.basicConfig(
     )
 )
 
-logger = logging.getLogger("mlProject")
+logger = logging.getLogger("mlProject") # It can be imported from other files to log
 
 """"
 #? logging_str = "[%(asctime)s: %(levelname)s: %(module)s: %(message)s]"
